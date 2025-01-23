@@ -49,22 +49,11 @@ export default defineType({
       of: [{ type: 'string' }],
     },
     {
-      name: 'category',
-      title: 'Category',
-      type: 'object',
-      fields: [
-        {
-          name: 'id',
-          title: 'Category ID',
-          type: 'number',
-        },
-        {
-          name: 'categoryTitle',
-          title: 'Category Title',
-          type: 'string',
-        },
-      ],
-    },
+      name: "category",
+      title: "Category",
+      type: "reference",
+      to: [{ type: "categories" }],
+  },
     {
       name: 'rating',
       title: 'Rating',
@@ -90,7 +79,21 @@ export default defineType({
       title: 'Tags',
       type: 'array',
       of: [{ type: 'string' }],
+      options: {
+        
+        list: [
+            { title: "Rustic", value: "rustic" },
+            {
+                title: "Vase",
+                value: "vase",
+            },
+            { title: "Home decor", value: "home decor" },
+            { title: "Vintag", value: "vintage" },
+            { title: "Interior design", value: "interior design" },
+        ],
     },
+    },
+    
     {
       name: 'isNew',
       title: 'New',

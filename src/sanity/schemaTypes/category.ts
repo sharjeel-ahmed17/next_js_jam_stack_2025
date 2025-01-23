@@ -14,8 +14,8 @@ export default {
             type: 'image',
         },
         {
+            name: 'productsCount',
             title: 'Number of Products',
-            name: 'products',
             type: 'number',
         }
     ],
